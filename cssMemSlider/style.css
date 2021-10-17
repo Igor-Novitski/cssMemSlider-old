@@ -40,3 +40,61 @@ p {
   width: calc(100% / 4);
   object-fit: cover;
 }
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text__window{
+  width: 40%;
+  overflow: hidden;
+}
+.text {
+  display: flex;
+  width: calc(100% * 4);
+  margin-left: 0;
+  margin-right: auto;
+
+}
+.text p {
+  width: calc(100% / 4);
+  font-size: 1rem;
+  line-height: 2rem;
+ text-align: left;
+}
+input {
+  display: none;
+}
+label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.controls__item {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: #4414f1;
+  cursor: pointer;
+}
+
+label:hover .controls__item{
+  background-color: rgb(19, 197, 182) ;
+}
+#slide1:checked ~ .checked_1 .controls__item,
+#slide2:checked ~ .checked_2 .controls__item,
+#slide3:checked ~ .checked_3 .controls__item,
+#slide4:checked ~ .checked_4 .controls__item {
+  background: none;
+  border: 2px solid #4414f1;
+}
+#slide1:checked ~ .checked_1:hover .controls__item,
+#slide2:checked ~ .checked_2:hover .controls__item,
+#slide3:checked ~ .checked_3:hover .controls__item,
+#slide4:checked ~ .checked_4:hover .controls__item {
+  border: 2px solid rgb(19, 197, 182);
+}
