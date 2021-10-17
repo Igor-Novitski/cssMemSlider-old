@@ -7,8 +7,10 @@
 body {
   padding: 2rem 0;
   font-family: Roboto;
-  background-image: linear-gradient(to right top, #a2a7ad, #83898d, #bbc8c9);
+  background: linear-gradient(to right top, #a2a7ad, #83898d, #bbc8c9) no-repeat;
+  background-attachment: fixed;
   text-align: center;
+  background-size: cover;
 }
 h1{
    margin-bottom: 2rem;
@@ -116,4 +118,17 @@ label:hover .controls__item{
 #slide4:checked ~ .slides__window .slides,
 #slide4:checked ~ .content .text__window .text {
   margin-left: -300%;
+}
+
+@media (max-width: 500px) {
+  .text__window{
+  width: 100%;
+}
+  .content  {
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    }
+    .controls{
+      margin: auto;
+    }
 }
